@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="airtel" class="perfect.project.Airtel">
+		<!-- Setter injection -->
+		<property name="dataStrength" value="this is 5g"></property>
+	</bean>
+
+	<bean id="idea" class="perfect.project.Idea">
+		<!-- Constructor injection -->
+		<constructor-arg name="dataStrength"
+			value="this is 2g"></constructor-arg>
+	</bean>
+
+</beans>
