@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- <bean class="com.autowiring.Adress" name="adress"> By name <bean class="com.autowiring.Adress" 
+		name="adress"> 
+		<property name="street" value="Lbnagar" /> 
+		<property name="city" value="Hyderbad" /> 
+		</bean> -->
+
+	<!--<bean class="com.autowiring.Emp" name="emp1" autowire="byName"/> -->
+	<!-- ************************************************************************** -->
+	<!-- Note : if we have two bean of bytype it will give error then we need 
+		to use the by name -->
+
+	<!-- <bean class="com.autowiring.Adress" name="adress1"> <property name="street" 
+		value="Lbnagar" /> 
+		<property name="city" value="Hyderbad" /> 
+		</bean>
+		
+		 <bean class="com.autowiring.Emp" name="emp1" autowire="byType" /> -->
+
+	<!-- ************************************************************************** -->
+	
+	<!-- constructor -->
+	<bean class="com.autowiring.Adress" name="adress">
+		<property name="street" value="Lbnagar" />
+		<property name="city" value="Hyderbad" />
+	</bean>
+
+	<bean class="com.autowiring.Emp" name="emp1"
+		autowire="constructor" />
+
+</beans>
